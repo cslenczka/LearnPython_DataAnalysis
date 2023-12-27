@@ -54,6 +54,33 @@ print('*****')
 # The above elements can be accessed by index or by position. Below are some operations that can be performed using the above dataframe:
 # Access all the data in a column
 print(dataframe["col A"]) # Using index
-
+print(dataframe.loc[:, "col A"]) # Using index
+print(dataframe.iloc[:, 0]) # Using position
+print('*****')
+# Access all the data in a row
+print(dataframe.loc["a"]) # Using index
+print(dataframe.iloc[0]) # Using position
+print('*****')
+# Access a specific element
+print(dataframe["col A"]["a"]) # Using index
+print(dataframe.loc["a", "col A"]) # Using index
+print(dataframe.iloc[0, 0]) # Using position
+print('*****')
+# create a new column
+dataframe["col D"] = [10, 11, 12]
+print(dataframe)
+print('*****')
+# create a new row
+dataframe.loc["d"] = [13, 14, 15, 16]   
+print(dataframe)
+print('*****')
+# multiply by 10 to elements of a column
+dataframe["col A"] = dataframe["col A"] * 10 # also dataframe["col A"] *= 10
+print(dataframe)
+print('*****')
+# calculate the sum of all elements 
+sum_all = dataframe.sum()          
+print(sum_all)  
+print('*****')
 
 
