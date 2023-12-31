@@ -41,4 +41,22 @@ print(s1)
 # Lambda expression or anonymous function
 s2 = s.apply(lambda x: x**2)
 print(s2)
+print('*****')
+# Custom functions to DataFrames
+df = pd.DataFrame({
+    "A": [1, 2, 3],
+    "B": [4, 5, 6]
+})
+print(df)
+# Apply function along a column
+df["A"] = df["A"].apply(lambda x: x**2)
+print(df)
+# Apply function along a row
+df.loc[0] = df.loc[0].apply(lambda x: x**2)
+print(df)
+print('*****')
+# Apply function to all elements
+df = df.applymap(lambda x: x**2)    # applymap applies a function to all the elements of the DataFrame
+print(df)
+print('*****')
 
