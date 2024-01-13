@@ -128,6 +128,68 @@ print("Exercise 08: Modify the index of the rows of the DataFrame of exercise 06
 df.index = ["row_{}".format(i) for i in range(10)]  # using list comprehension
 print(df)
 print(' ')
+# Create a series from ages = [23,45,7,34,6,63,36,78,54,34]
+print("Exercise 09: Create a series from ages = [23,45,7,34,6,63,36,78,54,34]")
+ages = [23,45,7,34,6,63,36,78,54,34]
+s = pd.Series(ages)
+print(s)
+print(' ')
+# Use the pd.date_range() function to create a series from 05-01-2021 to 05-12-2021 and print it
+print("Exercise 10: Use the pd.date_range() function to create a series from 05-01-2021 to 05-12-2021 and print it")
+dates = pd.date_range("05-01-2021", "05-12-2021")
+print(dates)
+print(' ')
+# Given a series variable my_series = pd.Series([2, 4, 6, 8, 10]) use function my_series.apply to divide all numbers by 2
+print("Exercise 11: Given a series variable my_series = pd.Series([2, 4, 6, 8, 10]) use function my_series.apply to divide all numbers by 2")
+my_series = pd.Series([2, 4, 6, 8, 10])
+my_series = my_series.apply(lambda x: x/2)
+print(my_series)
+print(' ')
+# Create a DataFrame from the following data:
+# data = [["Toyota", "Corolla", "Blue"], ["Ford", "K", "Yellow"], ["Porche", "Cayenne", "White"]]
+# and use the columns = ["Brand", "Model", "Color"]
+print("Exercise 12: Create a DataFrame from the following data:")
+print("data = [['Toyota', 'Corolla', 'Blue'], ['Ford', 'K', 'Yellow'], ['Porche', 'Cayenne', 'White']]")
+print("and use the columns = ['Brand', 'Model', 'Color']")
+data = [["Toyota", "Corolla", "Blue"], ["Ford", "K", "Yellow"], ["Porche", "Cayenne", "White"]]
+df = pd.DataFrame(data, columns=["Brand", "Model", "Color"])
+print(df)
+print(' ')
+# add new row to the above DataFrame for a red, Tesla, model S using loc() function
+print("Exercise 13: add new row to the above DataFrame for a red, Tesla, model S")
+df.loc[len(df)] = ["Tesla", "Model S", "Red"]
+print(df)
+print(' ')
+# Create a DataFrame from the following dictionary:
+data = [
+    { 
+        "brand": "Toyota", 
+        "make": "Corolla",
+        "color": "Blue"
+    },
+    {
+        "brand": "Ford", 
+        "make": "K",
+        "color": "Yellow"
+    },
+    {
+        "brand": "Porche", 
+        "make": "Cayenne",
+        "color": "White"
+    },
+    {
+        "brand": "Tesla", 
+        "make": "Model S",
+        "color": "Red"
+    }
+]
+print("Exercise 14: Create a DataFrame from the following data:")
+print(data)
+df = pd.DataFrame(data)
+print(df)
+
+
+
  
 
 
