@@ -36,5 +36,22 @@ print('Exercise 05: Mean of survivors')
 print(titanic_df['Survived'].mean()) 
 print(' ')
 print('*********************')
-
-
+# given the number of survivors and deads, calculate the percentage of survivors by class and sex
+print('Exercise 06: Given the number of survivors and deads, calculate the percentage of survivors by class and sex')
+print(' ')
+print('*********************')
+# calculate the mean of the age of the survivors
+print('Exercise 07: Calculate the mean of the age of the survivors')
+print(titanic_df.loc[titanic_df['Survived'] == 1]['Age'].mean())
+print(' ')
+print('*********************')
+# calculate the mean of the age of the deads
+print('Exercise 08: Calculate the mean of the age of the deads')
+print(titanic_df.loc[titanic_df['Survived'] == 0]['Age'].mean())
+print(' ')
+print('*********************')
+# calculate the mean of the age of the survivors by class
+print('Exercise 09: Calculate the mean of the age of the survivors by class')
+print(titanic_df.loc[titanic_df['Survived'] == 1].groupby('Pclass')['Age'].mean())
+print(' ')
+print('*********************')
