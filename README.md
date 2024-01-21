@@ -11,5 +11,3 @@ Pandas is a fundamental tool for any developer working with data in Python, as i
   - Custom Functions
 
 - Exercises
-
-- This is a new line of text to show what a commit is
